@@ -118,9 +118,8 @@ export type Event3_bool_uint256_Event = TypedEvent<
   { value1: boolean; value2: BigNumber }
 >;
 
-export type Event3_bool_uint256_EventFilter = TypedEventFilter<
-  Event3_bool_uint256_Event
->;
+export type Event3_bool_uint256_EventFilter =
+  TypedEventFilter<Event3_bool_uint256_Event>;
 
 export type Event3_uint256_Event = TypedEvent<
   [BigNumber],

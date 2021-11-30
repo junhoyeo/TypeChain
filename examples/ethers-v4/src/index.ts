@@ -10,7 +10,7 @@ async function main() {
   const provider = new ethers.providers.JsonRpcProvider(RPC_HOST)
   const formatEther = ethers.utils.formatEther
 
-  const dai = (new ethers.Contract(DAI_ADDRESS, abi, provider) as any) as Dai
+  const dai = new ethers.Contract(DAI_ADDRESS, abi, provider) as any as Dai
   const balance = await dai.functions.balanceOf('0x70b144972C5Ef6CB941A5379240B74239c418CD4')
 
   console.log(`Our DAI balance is: ${formatEther(balance)}`)
